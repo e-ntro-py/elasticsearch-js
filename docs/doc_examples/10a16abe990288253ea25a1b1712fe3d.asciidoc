@@ -5,6 +5,11 @@
 ----
 const response = await client.security.queryUser({
   with_profile_uid: "true",
+  query: {
+    prefix: {
+      roles: "other",
+    },
+  },
 });
 console.log(response);
 ----
